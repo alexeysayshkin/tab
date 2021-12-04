@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Document</title>
   <link rel="stylesheet" href="normolize.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container header__container">
       <div class="header__logo-container"><a class="header__logo" href="#">skb.</a></div>
-      
+
       <input id="search" class="header__input" type="text" placeholder="Введите запрос">
     </div>
   </header>
   <section class="hero">
     <div class="container hero__container">
-      <h2 class="title hero__title">Клиенты</h2>
+      <div class="hero__box">
+        <h2 class="title hero__title">Клиенты</h2>
+      </div>
       <div class="table__container" id="blockTwo">
         <table id="table" class="table table_sort">
           <thead class="head table__head ">
             <tr class="head__row">
               <th class="head__column head__column-id sorted " data-order="1">ID</th>
-              <th class="head__column sorted" id="datefio" data-order="1" > Фамилия Имя Отчество <span class="ot">A-Я</span> </th>
+              <th class="head__column sorted" id="datefio" data-order="1"> Фамилия Имя Отчество <span class="ot">A-Я</span> </th>
               <th class="head__column sorted" id="datefaq" data-order="1">Дата и время создания</th>
               <th class="head__column sorted" id="datesort" data-order="1">Последние изменения</th>
               <th class="head__column" id="datelern">Контакты</th>
@@ -34,7 +38,7 @@
           <tbody id="tbody" class="tbody">
           </tbody>
         </table>
-        
+
       </div>
       <div class="btn">
         <button id="myBtn" class="btn_click"><svg class="btn__svg" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,22 +56,23 @@
         </div>
         <form id="form" class="form__change">
           <div class="form__item">
-            <h5 id="surnames" class="header__form header__form-surnames">Фамилия<span class="star">*</span></h5>
+            <label id="surnames" class="header__form header__form-surnames" for="surname">Фамилия<span class="star">*</span></label>
             <span class="form__span" id="spn-surname">*Заполните все поля</span>
             <input type="text" id="surname" class="form-control">
           </div>
           <div class="form__item">
-            <h5 id="names" class="header__form">Имя<span class="star">*</span></h5>
+            <label id="names" class="header__form" for="name">Имя<span class="star">*</span></label>
             <span class="form__span" id="spn-name">*Заполните все поля</span>
             <input type="text" id="name" class="form-control">
           </div>
           <div class="form__item">
-            <h5 id="patronymics" class="header__form">Отчество</h5>
+            <label id="patronymics" class="header__form" for="patronymic">Отчество</label>
             <input type="text" id="patronymic" class="form-control">
           </div>
         </form>
       </div>
       <div id="forma" class="contact form_contact">
+        <div id="box"></div>
         <button id="contact" class="contact__btn">
           Добавить контакт
         </button>
@@ -88,7 +93,7 @@
       <button id="back" class="action__delete">Отмена</button>
     </div>
   </section>
-  
+
   <script src="main.js"></script>
 </body>
 

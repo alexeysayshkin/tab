@@ -980,14 +980,23 @@ table {
     position: sticky;
     left: 1vw;
     width: 100vw;
-
-
   }
 
   .btn_click {
     position: sticky;
     left: 12vw;
   }
+
+.hero__box{position: sticky;
+  display: flex;
+  width: 100vw;
+  left: 10px;
+}
+  .hero__title{
+    position: sticky;
+    left: 1vw;
+  }
+
 
   .tbody::before {
     position: absolute;
