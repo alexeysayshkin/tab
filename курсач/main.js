@@ -1,4 +1,4 @@
-
+"use strict";
 
 let doc = document.getElementById('tbody');
 let contact = document.getElementById('contact')
@@ -106,8 +106,6 @@ async function filterSearch() {
     btn.append(btnDelete)
     doc.append(tr);
 
-
-
   })
 
 };
@@ -142,15 +140,15 @@ async function createTab() {
 
     let age = new Date(user.createdAt)
     let tdAge = document.createElement('td');
-    tdAge.classList.add('age')
-    hour = age.getHours() + 1,
-      minute = age.getMinutes(),
-      minute = (minute < 10) ? '0' + minute : minute;
+    tdAge.classList.add('age');
+    let hour = age.getHours() + 1;
+    let minute = age.getMinutes();
+    minute = (minute < 10) ? '0' + minute : minute;
     hour = (hour < 10) ? '0' + hour : hour;
 
-    date = age.getDate(),
-      month = age.getMonth() + 1,
-      date = (date < 10) ? '0' + date : date;
+    let date = age.getDate();
+    let month = age.getMonth() + 1;
+    date = (date < 10) ? '0' + date : date;
     month = (month < 10) ? '0' + month : month;
     let spanAge = document.createElement('span')
     spanAge.classList.add('time')
@@ -160,15 +158,15 @@ async function createTab() {
     let ages = new Date(user.updatedAt)
     let tdTerm = document.createElement('td');
     tdTerm.classList.add('term')
-    dates = ages.getDate(),
-      months = ages.getMonth() + 1,
-      dates = (dates < 10) ? '0' + dates : dates;
+    let dates = ages.getDate();
+    let months = ages.getMonth() + 1;
+    dates = (dates < 10) ? '0' + dates : dates;
     months = (months < 10) ? '0' + months : months;
     let spanTerm = document.createElement('span')
     spanTerm.classList.add('time')
-    hours = ages.getHours() + 1,
-      minutes = ages.getMinutes(),
-      minutes = (minutes < 10) ? '0' + minutes : minutes;
+    let hours = ages.getHours() + 1;
+    let minutes = ages.getMinutes();
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
     hours = (hours < 10) ? '0' + hours : hours;
 
     tdTerm.textContent = dates + '.' + months + '.' + ages.getFullYear() + ' ';
@@ -219,19 +217,7 @@ async function createTab() {
     btn.append(btnChange)
     btn.append(btnDelete)
     doc.append(tr);
-
-  /*  let collection = document.getElementsByClassName("wrapper");
-    for (let i = 0; i < collection.length; i++) {
-      let childrenCollection = collection[i].children
-      if (childrenCollection.length > 5) {
-       // console.log(childrenCollection)
-        for (let j = 0; j < childrenCollection.length; j++) 
-        { console.log(childrenCollection[j].item) }
-
-
-      }
-    }*/
-  })
+  });
 
 };
 
@@ -265,13 +251,11 @@ doc.addEventListener("click", function (event) {
       function deleteItem() {
         fetch(urlTwo, {
           method: 'DELETE',
-        })
-        
+        });
       }
       modal3.style.display = "none"
-      deleteItem()
-      
-      document.location.reload()
+      deleteItem();
+
     })
 
   }
@@ -302,7 +286,8 @@ cancellation.addEventListener('click', function () {
 
 cancel.addEventListener('click', function () {
   modal.style.display = "none";
-  document.location.reload()
+  win.innerHTML = ""
+
 })
 
 span3.addEventListener('click', function () {
@@ -392,6 +377,7 @@ window.addEventListener("click", function (event) {
 
       contact.addEventListener('click', function () {
         let div = document.createElement('div')
+        let box = document.getElementById('box')
         div.classList.add('div__contact')
         let input = document.createElement('input');
         input.classList.add('input__contact');
@@ -407,7 +393,7 @@ window.addEventListener("click", function (event) {
         div.appendChild(selectDiv)
         div.appendChild(input)
         div.appendChild(btnClouse)
-        body.prepend(div)
+        box.appendChild(div)
 
         test();
         testIks()
@@ -440,7 +426,7 @@ window.addEventListener("click", function (event) {
         div.appendChild(selectDiv)
         div.appendChild(input)
         div.appendChild(btnClouse)
-        body.prepend(div)
+        box.appendChild(div)
 
         div.addEventListener('click', function (event) {
           if (event.target.classList == "btn__clouse hovermes") {
@@ -482,7 +468,7 @@ window.addEventListener("click", function (event) {
       }
       modal3.style.display = "none"
       deleteItems()
-      document.location.reload()
+
     })
     fillBtn.addEventListener('click', function () {
       let inputContact = document.getElementsByClassName('input__contact')
@@ -509,7 +495,7 @@ window.addEventListener("click", function (event) {
             contacts: narr,
           })
         })
-        document.location.reload();
+          ;
       }
       changeContact()
     });
@@ -542,7 +528,7 @@ window.addEventListener("click", function (event) {
       div.appendChild(selectDiv)
       div.appendChild(input)
       div.appendChild(btnClouse)
-      body.prepend(div)
+      box.appendChild(div)
 
       testIks();
 
@@ -581,7 +567,7 @@ window.addEventListener("click", function (event) {
             contacts: narr,
           })
         })
-        document.location.reload();
+
       }
       loadObj()
     });
@@ -606,13 +592,13 @@ window.addEventListener("click", function (event) {
 window.addEventListener('click', function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    document.location.reload();
+
   }
 })
 
 span.addEventListener('click', function () {
   modal.style.display = "none";
-  document.location.reload();
+  ;
 })
 
 let filterd = document.getElementById("search");
@@ -691,7 +677,6 @@ window.onload = function () {
     blockTwo.classList.add('loaded');
     blockTwo.classList.remove('loaded_hiding');
   }, 100);
-
 }
 
 
