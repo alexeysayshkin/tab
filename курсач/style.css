@@ -363,6 +363,11 @@ th:hover {
   line-height: 25px;
   color: #333333;
   position: relative;
+  margin-right: 3px;
+}
+
+#id, #span-id {
+  transform: translateY(-3px);
 }
 
 .closess::after {
@@ -404,13 +409,18 @@ th:hover {
   font-size: 40px;
 }
 
-.big .header__form {
-  font-size: 10px;
-  line-height: 14px;
+.big .header__form{
+  font-size: 10px !important;
+  line-height: 14px !important;
+}
+
+.form-control:focus .header__form {
+  font-size: 10px !important;
+  line-height: 14px !important
 }
 
 .big .form-control {
-  height: 24px;
+  height: 24px !important;
 }
 
 .header__form {
@@ -987,12 +997,14 @@ table {
     left: 12vw;
   }
 
-.hero__box{position: sticky;
-  display: flex;
-  width: 100vw;
-  left: 10px;
-}
-  .hero__title{
+  .hero__box {
+    position: sticky;
+    display: flex;
+    width: 100vw;
+    left: 10px;
+  }
+
+  .hero__title {
     position: sticky;
     left: 1vw;
   }
@@ -1024,14 +1036,15 @@ table {
   .select {
     min-width: 110px;
   }
-  .input__contact{
+
+  .input__contact {
     font-weight: 400;
     max-width: 160px;
     min-width: 160px;
   }
 
   .oko {
-  
+
     max-width: 132px;
     min-width: 132px;
   }
@@ -1046,11 +1059,13 @@ table {
     font-size: 12px;
     line-height: 16px;
   }
-  .close{
+
+  .close {
     top: 2%;
     position: absolute;
     left: 94%;
   }
+
   .form__delite {
     min-width: 300px;
     padding: 27px 13px;
