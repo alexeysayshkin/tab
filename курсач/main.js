@@ -176,7 +176,7 @@ async function createTab() {
     tr.append(tdId, tdName, tdAge, tdTerm);
     tdAge.append(spanAge);
     tdTerm.append(spanTerm);
-    
+
     let contact = user.contacts;
 
     let tdContact = document.createElement('td');
@@ -239,8 +239,9 @@ doc.addEventListener("click", function (event) {
 
       modal3.style.display = "none";
       deleteItem();
-      document.location.reload();
-
+      doc.innerHTML = '';
+      createTab();
+      // document.location.reload();
     });
 
   }
@@ -447,9 +448,12 @@ window.addEventListener("click", function (event) {
           method: 'DELETE',
         });
       }
+
       modal3.style.display = "none";
       deleteItems();
-      document.location.reload();
+      doc.innerHTML = '';
+      createTab();
+      //document.location.reload();
     });
     fillBtn.addEventListener('click', function () {
       let inputContact = document.getElementsByClassName('input__contact');
@@ -479,7 +483,10 @@ window.addEventListener("click", function (event) {
 
       }
       changeContact();
-      document.location.reload();
+      doc.innerHTML = '';
+      createTab();
+
+      //document.location.reload();
     });
     deliteBtn.addEventListener('click', function () {
       modal3.style.display = "flex";
@@ -562,12 +569,14 @@ window.addEventListener("click", function (event) {
             contacts: narr,
           })
         });
-
+        return;
       }
 
       loadObj();
       modal.style.display = "none";
-      document.location.reload();
+      doc.innerHTML = '';
+      createTab();
+      //document.location.reload();
     });
   }
   function myFunction() {
@@ -590,13 +599,18 @@ window.addEventListener("click", function (event) {
 window.addEventListener('click', function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    document.location.reload();
+
+    doc.innerHTML = '';
+    createTab();
+    //document.location.reload();
   }
 });
 
 span.addEventListener('click', function () {
   modal.style.display = "none";
-  document.location.reload();
+  doc.innerHTML = '';
+  createTab();
+  //document.location.reload();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
