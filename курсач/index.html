@@ -50,9 +50,9 @@
   <section id="myModal" class="form">
     <div class="form__window">
       <div class="form__window-inputs">
-        <span class="close"></span>
+        <span id="close" class="close"></span>
         <div class="form__block">
-          <h3 id="header" class="form__tirle"></h3><span id="id"></span><span id="span-id"></span>
+          <h3 id="header" class="form__tirle">Новый клиент</h3>
         </div>
         <form id="form" class="form__change">
           <div class="form__item">
@@ -72,15 +72,50 @@
         </form>
       </div>
       <div id="forma" class="contact form_contact">
-        <div id="box"></div>
+        <form id="box"></form>
         <button id="contact" class="contact__btn">
           Добавить контакт
         </button>
       </div>
       <div class="action form__action">
         <button id="fill" class="action__save">Сохранить</button>
-        <button id="delite" class="action__delete">Удалить клиента</button>
         <button id="cancel" class="action__cancel">Отмена</button>
+      </div>
+    </div>
+  </section>
+  <section id="myModal2" class="form">
+    <div class="form__window">
+      <div class="form__window-inputs">
+        <span id="closes" class="close"></span>
+        <div class="form__block">
+          <h3 id="header2" class="form__tirle">Изменить данные</h3><span id="id2">ID:</span><span id="span-id2"></span>
+        </div>
+        <form id="form2" class="form__change">
+          <div class="form__item">
+            <label id="surnames2" class="header__form header__form-surnames" for="surname">Фамилия<span class="star">*</span></label>
+            <span class="form__span" id="spn-surname2">*Заполните все поля</span>
+            <input type="text" id="surname2" class="form-control">
+          </div>
+          <div class="form__item">
+            <label id="names2" class="header__form" for="name">Имя<span class="star">*</span></label>
+            <span class="form__span" id="spn-name2">*Заполните все поля</span>
+            <input type="text" id="name2" class="form-control">
+          </div>
+          <div class="form__item">
+            <label id="patronymics2" class="header__form" for="patronymic">Отчество</label>
+            <input type="text" id="patronymic2" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div id="forma2" class="contact form_contact">
+        <form id="box2"></form>
+        <button id="contact2" class="contact__btn">
+          Добавить контакт
+        </button>
+      </div>
+      <div class="action form__action">
+        <button id="fill2" class="action__save">Сохранить</button>
+        <button id="delite2" class="action__delete">Удалить клиента</button>
       </div>
     </div>
   </section>
@@ -89,7 +124,7 @@
       <span class="closess"></span>
       <h3 id="header3" class="form__tirle">Удалить клиента</h3>
       <p class="form__paragraph">Вы действительно хотите удалить данного клиента?</p>
-      <button id="delite3" class="action__save">Удалить</button>
+      <button id="delite3"  class="action__save">Удалить</button>
       <button id="back" class="action__delete">Отмена</button>
     </div>
   </section>

@@ -366,9 +366,6 @@ th:hover {
   margin-right: 3px;
 }
 
-#id, #span-id {
-  transform: translateY(-3px);
-}
 
 .closess::after {
   content: url(img/Union.svg);
@@ -575,7 +572,7 @@ input:focus-visible {
   outline: none;
 }
 
-.input__contact {
+.input__contact, .input__contacts {
   min-width: 267px;
   min-height: 37px;
   border: none;
@@ -927,10 +924,11 @@ table {
   display: none;
 }
 
-#id, #span-id {
+#id2, #span-id2 {
   font-size: 12px;
   line-height: 16px;
   color: #B0B0B0;
+  transform: translateY(-3px);
 }
 
 @media(max-width:950px) {
@@ -1037,7 +1035,7 @@ table {
     min-width: 110px;
   }
 
-  .input__contact {
+  .input__contact, .input__contacts {
     font-weight: 400;
     max-width: 160px;
     min-width: 160px;
